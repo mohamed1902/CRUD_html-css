@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="bg-light">
+        <div class="container py-5">
+            <div class="input form-label">
+                <label class="fw-semibold" for="prodectNameInput">ProdectName</label>
+                <input class="form-control " type="text" id="prodectNameInput">
+                <div class="alert alert-danger d-none" id="alertProdectName">
+                    <p>Enter ProdectName correctly Start upperCase Not less than three and not more than eight</p>
+                </div>
+            </div>
+            <div class="input form-label">
+                <label class="fw-semibold" for="prodectPriceInput">ProdectPrice</label>
+                <input class="form-control" type="number" id="prodectPriceInput">
+            </div>
+            <div class="input form-label">
+                <label class="fw-semibold" for="prodectCategeryInput">ProdectCategery</label>
+                <input class="form-control" type="text" id="prodectCategeryInput">
+            </div>
+            <div class="input form-label">
+                <label class="fw-semibold" for="prodectDescInput">ProdectDesc</label>
+                <textarea class="form-control" type="text" id="prodectDescInput"></textarea>
+            </div>
+            <button id="buAddProdect" onclick="addProdect();" class="mt-2 btn btn-outline-info">AddProdect</button>
+        </div>
+        <div class="container">
+            <input onkeyup="searchProdect(this.value)" type="search" placeholder="Search" class="form-control w-50 m-auto mb-3">
+            <table class="table">
+                <thead>
+                    <th>Index</th>
+                    <th>ProdectName</th>
+                    <th>ProdectPrice</th>
+                    <th>ProdectCategery</th>
+                    <th>ProdectDesc</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="addRow">
+                    
+                </tbody>
+            </table>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
